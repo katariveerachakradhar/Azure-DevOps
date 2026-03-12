@@ -1,0 +1,27 @@
+🔹 DevOps Principles (Very Common MCQs)
+Principle	              Meaning
+CI	              Merge code frequently
+CD	              Automated deployments
+IaC	              Infra in code (Terraform/Bicep)
+Shift-Left	      Test & secure early
+Feedback Loops	  Monitoring → work items
+
+
+🔹 Azure Boards – Must-Remember Points
+Work Item Hierarchy
+Epic → Feature → User Story → Task → Bug
+
+Boards Use Cases
+    Sprint planning
+    Velocity tracking
+    Linking: Commit → Build → Release → Work Item
+
+🔹 Azure Repos – Git Exam Notes
+Supported
+    Git (preferred)
+    TFVC (legacy)
+Branch Policies (VERY IMPORTANT)
+    Mandatory PR review
+    Build validation
+    Minimum reviewers
+    Prevent direct pushes to main
