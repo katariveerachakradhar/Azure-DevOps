@@ -25,3 +25,28 @@ Branch Policies (VERY IMPORTANT)
     Build validation
     Minimum reviewers
     Prevent direct pushes to main
+
+🔹 Azure Pipelines – Highest Weightage
+Pipeline Types
+Type	            Purpose
+CI	               Build + Test
+CD	               Deploy
+
+YAML vs Classic
+YAML	                Classic
+Pipeline as Code	   UI-based
+Version controlled	   Harder to track
+Recommended	           Legacy
+
+
+🔹 Secrets & Secure Configurations
+
+🔹 Infrastructure as Code (IaC)
+
+🔹 Testing & Quality Gates
+
+🔹 DevSecOps – Security Integration
+
+🔹 Release Strategies (Scenario-Based)
+
+🔹 Monitoring & Feedback
