@@ -1,4 +1,5 @@
 🔹 DevOps Principles
+
 Principle	              Meaning
 CI	              Merge code frequently
 CD	              Automated deployments
@@ -8,25 +9,28 @@ Feedback Loops	  Monitoring → work items
 
 
 🔹 Azure Boards – Must-Remember Points
-Work Item Hierarchy
-Epic → Feature → User Story → Task → Bug
 
-Boards Use Cases
-    Sprint planning
-    Velocity tracking
-    Linking: Commit → Build → Release → Work Item
+👉Work Item Hierarchy
+    Epic → Feature → User Story → Task → Bug
+
+👉 Boards Use Cases
+        Sprint planning
+        Velocity tracking
+        Linking: Commit → Build → Release → Work Item
 
 🔹 Azure Repos – Git Exam Notes
-Supported
-    Git (preferred)
-    TFVC (legacy)
-Branch Policies (VERY IMPORTANT)
-    Mandatory PR review
-    Build validation
-    Minimum reviewers
-    Prevent direct pushes to main
+
+👉 Supported
+        Git (preferred)
+        TFVC (legacy)
+👉 Branch Policies (VERY IMPORTANT)
+        Mandatory PR review
+        Build validation
+        Minimum reviewers
+        Prevent direct pushes to main
 
 🔹 Azure Pipelines – Highest Weightage
+
 Pipeline Types
 Type	            Purpose
 CI	               Build + Test
@@ -38,15 +42,117 @@ Pipeline as Code	   UI-based
 Version controlled	   Harder to track
 Recommended	           Legacy
 
-
 🔹 Secrets & Secure Configurations
+
+👉 What it means --- Handling sensitive data securely in pipelines and infrastructure.
+
+Key Concepts 
+    Secrets = passwords, API keys, tokens, certificates
+    Never hardcode secrets in code or YAML
+
+Azure Tools:
+    Azure Key Vault
+    Variable Groups (with secret values)
+
+Best Practices
+    Use Key Vault integration in pipelines
+    Use managed identities instead of credentials
+    Rotate secrets regularly
+    Use environment-based configs (Dev/UAT/Prod)
 
 🔹 Infrastructure as Code (IaC)
 
+👉 What it means --- Managing infrastructure using code instead of manual setup.
+
+Tools:
+    Terraform (most common)
+    Azure Bicep / ARM templates
+    CloudFormation (AWS)
+
+Benefits:
+    Reusable infrastructure
+    Version control
+    Consistency across environments
+    Faster provisioning
+
+DevOps Flow: Code → Git → Pipeline → Deploy Infra
+
+Example: Create VM, VNet, AKS using Terraform
+
 🔹 Testing & Quality Gates
+
+👉 What it means --- Ensuring code quality before deployment.
+
+Types of Testing:
+    Unit Testing
+    Integration Testing
+    Security Testing (SAST/DAST)
+
+Tools:
+    SonarQube (code quality)
+    JUnit, NUnit (unit testing)
+
+Quality Gates
+    Code coverage threshold
+    No critical vulnerabilities
+    Build must pass
+
+Pipeline Flow --- Code → Build → Test → Quality Gate → Deploy
 
 🔹 DevSecOps – Security Integration
 
-🔹 Release Strategies (Scenario-Based)
+👉 What it means --- Integrating security into every stage of DevOps.
+
+“Shift Left Security” --- Security starts early (not only at production)
+
+Tools:
+    SAST → SonarQube
+    DAST → OWASP ZAP
+    Container Scan → Trivy
+    Dependency Scan → Mend / Snyk
+
+Pipeline Example --- Code → Scan → Build → Scan → Deploy
+
+Key Practices
+    Secure coding
+    Vulnerability scanning
+    Secrets management
+    Compliance checks
+
+🔹 Release Strategies
+
+👉 What it means --- Different ways to deploy applications safely.
+
+Types
+
+1️⃣ Blue-Green Deployment ---Two environments (Blue & Green)
+    Switch traffic after testing (Zero downtime)
+
+2️⃣ Canary Deployment
+    Release to small % of users (Monitor before full rollout)
+
+3️⃣ Rolling Deployment
+    Update servers gradually (No downtime, slower rollout)
+
+4️⃣ Recreate Deployment
+    Stop old → start new (Simple but downtime)
 
 🔹 Monitoring & Feedback
+
+👉 What it means --- Tracking system performance and feeding data back to improve.
+
+Tools:
+    Prometheus (metrics)
+    Grafana (dashboard)
+    Azure Monitor
+    CloudWatch
+
+What to Monitor
+    CPU, Memory
+    Application logs
+    Errors & failures
+    Response time
+
+Feedback Loop --- Monitoring → Alerts → Fix → Improve
+
+Example --- Alert triggers → Jira/Azure Board ticket created
