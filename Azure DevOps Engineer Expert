@@ -157,11 +157,10 @@ Feedback Loop --- Monitoring → Alerts → Fix → Improve
 
 Example --- Alert triggers → Jira/Azure Board ticket created
 
-🔹 RBAC & Governance
-Area	Purpose
-RBAC	Access control
-Audit Logs	Compliance
-Policies	Governance
+🔹 RBAC     &         Governance
+   Area	                Purpose
+   RBAC	                Access control
+   Audit Logs	        Compliance
+   Policies	        Governance
 
-👉 Exam Rule:
-Least privilege always
+👉 Exam Rule --- Least privilege always
